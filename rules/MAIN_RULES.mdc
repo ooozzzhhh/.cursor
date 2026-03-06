@@ -10,8 +10,8 @@ alwaysApply: true
 ## 一、日常规则
 ### 规则1：Always respond in Chinese-simplified
 除非用户特别指定/说明，否则总是以中文回答。
-### 规则2：不要修改scp-foundation的代码
-除非用户特别指定/说明，否则不要修改scp-foundation的代码。
+### 规则2：不要修改UHA/scp-foundation的代码
+除非用户特别指定/说明，否则不要修改UHA/scp-foundation的代码。
 
 ## 二、产品AI工作流
 

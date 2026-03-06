@@ -155,7 +155,7 @@ alwaysApply: false
 **主会话前置义务**：若需求入口目录已存在 `需求.txt` 等结构化说明，主会话须先自行阅读并理解，在调用 subagent 前显式传递：所属模块与功能范围、代码来源信息、已有设计稿/原型位置、是否需原型设计等。若需求文档指出代码不在当前本地仓库，主会话不得在后续提示中与之矛盾；若无法访问指定仓库/分支，须说明限制并要求 subagent 在调研结论中标注「仅基于当前可见代码/数据的初步结论」。
 
 **流程**：主会话调用 product-manager。product-manager 必须按序完成：
-1. **现状调研**：除非用户明确说明「本次不需要调研」或指定可复用知识库，先按 `code-implementation-research` skill 执行调研，查阅 `scp-foundation/` 下对应模块代码、测试数据库（环境默认是 `scp-test`；具体库默认是`scp-XX`，例如`scp-sop`）表结构，将调研结果沉淀到 `产品设计/产品知识库/模块/...`，返回「现有能力、限制点、潜在改动影响」。
+1. **现状调研**：除非用户明确说明「本次不需要调研」或指定可复用知识库，先按 `code-implementation-research` skill 执行调研，查阅 `UHA/scp-foundation` 下对应模块代码、测试数据库（环境默认是 `scp-test`；具体库默认是`scp-XX`，例如`scp-sop`）表结构，将调研结果沉淀到 `产品设计/产品知识库/模块/...`，返回「现有能力、限制点、潜在改动影响」。
 2. **PRD 撰写**：基于业务描述、调研结论（或指定知识库）、已有产品文档，在 `产品设计/产品PRD/模块/模块_需求名/` 下按 prd-writing 规范撰写增量 PRD。
 
 **产品经理补充规则**：
@@ -168,7 +168,7 @@ alwaysApply: false
 
 **流程守卫**：在未收到上述明确同意前，主会话**禁止**调用 product-frontend-designer、product-test-manager 或 product-reviewer。
 
-> **本仓库特别提示**：`c:\Users\OZH\Desktop\scp-foundation` 不是 Git 仓库；真实代码仓库位于 `c:\Users\OZH\Desktop\scp-foundation\scp-foundation`。调用产品经理做代码调研时，如未特别说明，主会话应默认以该子目录为代码仓库根目录。
+> **本仓库特别提示**：`c:\Users\OZH\Desktop\UHA` 不是 Git 仓库；真实代码仓库位于 `c:\Users\OZH\Desktop\UHA\scp-foundation`。调用产品经理做代码调研时，如未特别说明，主会话应默认以该子目录为代码仓库根目录。
 
 ---
 
