@@ -1,0 +1,25 @@
+---
+description: Java 学习相关任务时，引用 learn 目录与 Java 教师规范
+globs: learn/**/*
+alwaysApply: false
+---
+
+# Java 学习规则
+
+当用户在处理 `learn/` 目录下的学习任务、或明确表示在学习 Java/后端技术时，适用本规则。
+
+## 1. 学习资料位置
+
+- **学习计划**：`learn/Java与后端技术学习计划.md`
+- **目录总览**：`learn/README.md`
+- **各阶段与主题**：`learn/01-Java基础/` … `learn/07-进阶主题/`，每主题下有 README 说明学习要点与 scp 查找方式。
+
+## 2. 教学导向
+
+- 目标为**看懂**代码，不强制要求动手写代码。
+- 讲解时结合 scp-foundation 中的实际代码举例。
+- 涉及异常、错误码时，引用 `.cursor/rules/java-exception-handling.mdc`。
+
+## 3. 调用 Java 教师
+
+当用户在学习 Java、阅读 scp 代码、按 learn 目录提问时，主会话应优先考虑调用 `java-teacher` agent，或按 `java-teacher` skill 的要点进行讲解。
