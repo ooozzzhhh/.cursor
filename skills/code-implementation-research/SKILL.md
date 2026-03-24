@@ -157,7 +157,8 @@ SCP Foundation 是供应链计划平台，采用微服务架构。模块与端�
 
 - **默认环境**：测试环境 `scp-test`；仅在上层或用户明确指定时使用 `scp-prod`。
 - **库命名**：`scp_XX`，如 `scp_ips`、`scp_dfp`、`scp_sop`、`scp_mps`、`scp_ams` 等。
-- **工具**：优先使用 MCP 数据库工具连接并查询表结构；若 MCP 调用失败，可尝试在 `TEMP_WORK_ZONE` 下创建临时 Python 脚本连接；若仍无法连接，须明确告知主会话和用户，并在调研报告中写明无法进行数据库调研。MCP 配置参考见 [mcp-db-config.md](mcp-db-config.md)。
+- **连接与默认库**：使用 MySQL MCP 时须先 `connect_db` 且 **指定 `database`**；SDS 与主数据交叉核对时 **默认可用库 `scp_mps`**，详见 [mcp-db-config.md](mcp-db-config.md)。若 MCP 失败，可尝试 `temp_work` 临时脚本；仍失败须在结论中说明。
+- **产品文档表述**：写入 `产品设计/` 下 PRD、问题分析报告、知识库时，**只写「基于哪个库 / 环境」**（库名、主机等），**不要**把 MCP 工具名、`mcp.json` 路径写进正文。
 
 ---
 
