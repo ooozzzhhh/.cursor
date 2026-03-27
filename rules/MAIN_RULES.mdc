@@ -12,6 +12,8 @@ alwaysApply: true
 除非用户特别指定/说明，否则总是以中文回答。
 ### 规则2：不要修改UHA/scp-foundation的代码
 除非用户特别指定/说明，否则不要修改UHA/scp-foundation的代码。
+### 规则3：数据与排障优先用 MCP 数据库（若已配置）
+当用户给出**具体库名/环境（测试或生产）**、或问题明显涉及**是否数据缺失/不一致**（如接口 500、数据检查失败、租户数据核对）时，主会话应**先**检查工作区是否存在 `.cursor/mcp.json`，并在 MCP 工具描述目录（如 `mcps/<server>/tools/`）中确认是否具备 `query`、`connect_db`、`list_tables` 等能力；若具备，**优先通过 MCP 执行只读 SQL** 辅助结论，而不是仅推断「无法连库」或只读代码。调用前须阅读对应工具的 schema；`connect_db` 若需 `database` 等参数而配置未写全，应使用与 `mcp.json` 一致的 host/user/password 并显式传入 `database`。**勿在对话中复述密码**；对生产库须更谨慎，默认以只读查询为主。
 
 ## 二、产品AI工作流
 
