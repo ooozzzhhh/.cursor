@@ -21,6 +21,17 @@
         "--user=scp_ips",
         "--password=scp_ips"
       ]
+    },
+    "scp-upgrade": {
+      "command": "C:/nodejs/npx.cmd",
+      "args": [
+        "-y",
+        "mcp-mysql-server",
+        "--host=10.7.60.115",
+        "--port=3306",
+        "--user=scp_ips",
+        "--password=scp_ips"
+      ]
     }
   }
 }
