@@ -6,7 +6,7 @@
 
 ## 1. 配置从哪里来
 
-- **Cursor 全局 MCP 声明**：用户本机 `C:\Users\OZH\.cursor\mcp.json`（`scp-test` / `scp-prod` 等条目；**账号口令以该文件为准**，勿写入本仓库）。
+- **Cursor MCP 声明**：优先看本仓库工作区内的 `.cursor/mcp.json`；若使用用户级配置，则为 macOS/Linux 下的 `~/.cursor/mcp.json`（Windows 为 `%USERPROFILE%\.cursor\mcp.json`）。其中 `scp-test` / `scp-prod` 等条目里的 **账号口令以你本机该文件为准**，勿写入本仓库。
 - **Cursor 里映射的服务名**：工具侧可能显示为 `user-scp-test`、`user-scp-prod` 等，与 `mcp.json` 里的 key 对应，以当前会话可用的 MCP 服务器名为准。
 
 ---
@@ -41,7 +41,7 @@
 {
   "mcpServers": {
     "scp-test": {
-      "command": "C:/nodejs/npx.cmd",
+      "command": "/usr/local/bin/npx",
       "args": [
         "-y",
         "mcp-mysql-server",
@@ -54,6 +54,8 @@
   }
 }
 ```
+
+> **说明**：`npx` 路径以本机为准；Intel + Homebrew 常见为 `/usr/local/bin/npx`，Apple Silicon 常见为 `/opt/homebrew/bin/npx`。终端执行 `which npx` 可核对。
 
 ---
 

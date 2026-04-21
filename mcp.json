@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "scp-test": {
-      "command": "C:/nodejs/npx.cmd",
+      "command": "/usr/local/bin/npx",
       "args": [
         "-y",
         "mcp-mysql-server",
@@ -12,7 +12,7 @@
       ]
     },
     "scp-prod": {
-      "command": "C:/nodejs/npx.cmd",
+      "command": "/usr/local/bin/npx",
       "args": [
         "-y",
         "mcp-mysql-server",
@@ -22,8 +22,8 @@
         "--password=scp_ips"
       ]
     },
-    "scp-upgrade": {
-      "command": "C:/nodejs/npx.cmd",
+    "scp-upgrade/scp-orm-jdk17": {
+      "command": "/usr/local/bin/npx",
       "args": [
         "-y",
         "mcp-mysql-server",

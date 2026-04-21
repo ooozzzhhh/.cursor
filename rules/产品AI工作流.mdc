@@ -168,7 +168,7 @@ alwaysApply: false
 
 **流程守卫**：在未收到上述明确同意前，主会话**禁止**调用 product-frontend-designer、product-test-manager 或 product-reviewer。
 
-> **本仓库特别提示**：`c:\Users\OZH\Desktop\UHA` 不是 Git 仓库；真实代码仓库位于 `c:\Users\OZH\Desktop\UHA\scp-foundation`。调用产品经理做代码调研时，如未特别说明，主会话应默认以该子目录为代码仓库根目录。
+> **本仓库特别提示**：`/Users/ooo/Desktop/UHA` 不是 Git 仓库；真实代码仓库位于 `/Users/ooo/Desktop/UHA/scp-foundation`。调用产品经理做代码调研时，如未特别说明，主会话应默认以该子目录为代码仓库根目录。
 
 ---
 
