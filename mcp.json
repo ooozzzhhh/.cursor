@@ -22,12 +22,23 @@
         "--password=scp_ips"
       ]
     },
-    "scp-upgrade/scp-orm-jdk17": {
+    "scp-prod17/scp-test17": {
       "command": "/usr/local/bin/npx",
       "args": [
         "-y",
         "mcp-mysql-server",
         "--host=10.7.60.115",
+        "--port=3306",
+        "--user=scp_ips",
+        "--password=scp_ips"
+      ]
+    },
+    "poc": {
+      "command": "/usr/local/bin/npx",
+      "args": [
+        "-y",
+        "mcp-mysql-server",
+        "--host=10.7.60.155",
         "--port=3306",
         "--user=scp_ips",
         "--password=scp_ips"
